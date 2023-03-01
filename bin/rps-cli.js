@@ -19,7 +19,7 @@ try{
     console.log(JSON.stringify(rps(argument._[0])));
 } catch (error){
     if (error instanceof RangeError){
-        console.log('Error: ${argument._[0]} is invalid input');
+        console.log('Your input is out of range');
         rules();
         process.exit();
     }
