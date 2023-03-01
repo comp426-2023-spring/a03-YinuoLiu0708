@@ -21,7 +21,6 @@ try{
     if (error instanceof RangeError){
         console.log(`${argument._[0]} is out of range.`);
         rules();
-        process.exit();
     }
 }
 
