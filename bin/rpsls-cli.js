@@ -19,7 +19,7 @@ try{
     console.log(JSON.stringify(rpsls(argument._[0])));
 } catch (error){
     if (error instanceof RangeError){
-        console.log(`Error: ${argument._[0]} is out of range.`);
+        console.log(`${argument._[0]} is out of range.`);
         rules();
         process.exit();
     }
