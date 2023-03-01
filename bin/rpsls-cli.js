@@ -19,7 +19,7 @@ try{
     console.log(JSON.stringify(rpsls(argument._[0])));
 } catch (error){
     if (error instanceof RangeError){
-        console.log('Error: ${argument._[0]} is invalid input');
+        console.log('Your input is invalid');
         rules();
         process.exit();
     }
