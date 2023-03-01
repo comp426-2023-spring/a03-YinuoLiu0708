@@ -1,0 +1,29 @@
+{
+  "name": "node-rpsls",
+  "version": "1.0.0",
+  "description": "an installable Node.js module package",
+  "main": "./lib/rpsls.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a03-YinuoLiu0708.git"
+  },
+  "keywords": [
+    "Node.js"
+  ],
+  "author": "Yinuo Liu",
+  "license": "GPL-3.0-or-later",
+  "bin": {
+    "node-rps": "./bin/rps-cli.js",
+    "node-rpsls": "./bin/rpsls-cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a03-YinuoLiu0708/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a03-YinuoLiu0708#readme",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}
