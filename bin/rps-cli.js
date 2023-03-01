@@ -21,6 +21,7 @@ try{
     if (error instanceof RangeError){
         console.log('Error: ${argument._[0]} is invalid input');
         rules();
+        process.exit();
     }
 }
 
