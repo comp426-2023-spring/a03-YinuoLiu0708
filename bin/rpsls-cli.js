@@ -7,19 +7,17 @@ var argument = minimist(process.argv.slice(2))
 
 if (argument.h || argument.help){
     help();
-    process.exit();
 }
 
 if (argument.r || argument.rules){
     rules();
-    process.exit();
 }
 
 try{
     console.log(JSON.stringify(rpsls(argument._[0])));
 } catch (error){
     if (error instanceof RangeError){
-        console.log(`${argument._[0]} is out of range.`);
+        console.error(`${argument._[0]} is out of range.`);
         rules();
     }
 }
@@ -38,11 +36,12 @@ function help() {
           node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.
                             e.g {"player":"rock","opponent":"Spock","result":"lose"}`
     );
+    process.exit();
 }
 
 function rules() {
     console.log(
-        `Rules for the Lizard-Spock Espansion of Rock Paper Scissors:
+        `Rules for the Lizard-Spock Expansion of Rock Paper Scissors:
 
         - Scissors CUTS Paper
         - Paper COVERS Rock
@@ -55,4 +54,5 @@ function rules() {
         - Spock VAPORIZES Rock
         - Rock CRUSHES Scissors`
     );
+    process.exit();
 }
